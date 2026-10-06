@@ -105,3 +105,15 @@ if __name__ == "__main__":
     print("unobfuscated payload signature:")
     print(signature)
 ```
+
+Which gives us the **output** of:
+```py
+unobfuscated payload signature:
+[103, 99, 116, 102, 50, 54, 123, 115, 122, 117, 100, 122, 49, 107, 95, 98, 49, 106, 51, 99, 55, 49, 48, 110, 95, 112, 52, 99, 107, 51, 114, 95, 100, 51, 102, 51, 52, 55, 51, 100, 125]
+```
+
+And when put into **CyberChef** converting from **Decimal**:
+
+![alt text](szudzik-output.png)
+
+`gctf26{szudz1k_b1j3c710n_p4ck3r_d3f3473d}`
