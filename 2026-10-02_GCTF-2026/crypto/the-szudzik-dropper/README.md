@@ -43,13 +43,14 @@ if __name__ == "__main__":
     print("Obfuscated payload signature:")
     print(signature)
 ```
-
+\
 `output.txt`
 ```
 Obfuscated payload signature:
 195390014645616526811445087179505427788741973674457235287782954449193768603971718690010617438712386268024827135724473740960104005201143
 ```
 
+\
 A quick look at the encryption code provided tells us this is a **recursive** case of the Szudzik function, and our goal here is to simply decrypt the obfuscated payload here back into flag.
 
 > A deeper analysis of what's happening here is that we're taking the flag, split it into halves recursively (giving us a *binary tree*) until we reach one singular character at the end, then pair up the halves into one long int as in `output.txt`. 
@@ -58,6 +59,7 @@ Luckily, the inverse of the Szudzik is also easily found with the formula availa
 
 ![alt text](szudzik-unpair.png)
 
+\
 However, I had missed a small detail initially which made me fail to get the decoding program to work at first:
 ```py
 with open("output.txt", "rb") as f:
@@ -69,6 +71,7 @@ For example, character `g` gets read as `103` via `"rb" (read binary)` mode. (Th
 
 Thus, we have to add `if data < 256:` as the base case into the decoding script so that the recursion knows to stop when the `int` value reaches below the size for one ASCII character (exactly one character).
 
+---
 The script I used to solve (basically just took the original script and modified it):  
 
 `undropper.py`
