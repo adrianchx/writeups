@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>StardewVolley</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="StardewModdingAPI" />
+    <Reference Include="Stardew Valley" />
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces" />
+    <Reference Include="StardewValley.GameData" />
+    <Reference Include="System.Text.Json">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.16\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

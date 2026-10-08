@@ -1,0 +1,10 @@
+{
+  "Name": "Stardew Volley",
+  "Author": "171k",
+  "Version": "1.2.7",
+  "Description": "Adds a volleyball to the valley with a simple bounce interaction.",
+  "UniqueID": "171k.StardewVolley",
+  "EntryDll": "StardewVolley.dll",
+  "MinimumApiVersion": "4.5.2",
+  "UpdateKeys": []
+}
