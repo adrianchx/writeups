@@ -88,7 +88,7 @@ Extracting the second MIME part and Base64-decoding it gives us the SVG file. Th
 
 Here's the full `<script></script>` section:
 
-```xml
+```js
 <script type="text/javascript"><![CDATA[
 
 /*
