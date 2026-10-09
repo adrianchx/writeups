@@ -2,7 +2,8 @@
 
 **Event:** Girls in CTF 2026\
 **Date:** 2–4 October 2026\
-**Team:** `adrianchx` (me), [`SelinaTan`](https://github.com/SelinaTan05)\
+**Team:** B!4WaK5\
+**Team members:**`adrianchx` (me), [`SelinaTan`](https://github.com/SelinaTan05)\
 **Solved:** 11 challenges · 3317 pts
 
 
