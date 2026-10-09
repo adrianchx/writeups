@@ -4,7 +4,7 @@ Solved by `adrianchx`
 
 ## Introduction
 
-Dead Drop is a forensics challenge built around a preserved phishing email. We're given a `.eml` file, the raw, unmodified email as it would have traveled across mail servers and asked to follow the "digital breadcrumbs" to identify the payload and the document it was trying to steal.
+Dead Drop is a forensics challenge built around a preserved phishing email. We're given a `incident.eml` file, the raw, unmodified email as it would have traveled across mail servers and asked to follow the "digital breadcrumbs" to identify the payload and the document it was trying to steal.
 
 The challenge description frames it as: a forged corporate security notice was delivered to a finance employee, suspicious outbound traffic followed, and investigators preserved the original email. The task is to uncover what the payload was really after and identify the document tied to the attempted heist.
 
